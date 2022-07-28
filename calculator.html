@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>calculator</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script>  
+
+function display(val)
+{
+	document.getElementById("result").value+=val;
+}
+function clearscreen()
+{
+    document.getElementById("result").value="";
+}
+function compute()
+{
+    document.getElementById("result").value=eval(document.getElementById("result").value);
+}
+function remove()
+{
+    var x= document.getElementById("result").value.length;
+    document.getElementById("result").value= document.getElementById("result").value.substring(0,x-1);
+}
+function root()
+{
+    document.getElementById("result").value=Math.sqrt( document.getElementById("result").value);
+}
+function cubicroot()
+{
+    document.getElementById("result").value=Math.cbrt( document.getElementById("result").value);
+}
+function power2()
+{
+    document.getElementById("result").value=Math.pow( document.getElementById("result").value,2);
+}
+
+function pi()
+{
+    document.getElementById("result").value=Math.PI*( document.getElementById("result").value);
+}
+function sin()
+{
+    document.getElementById("result").value=Math.sin( document.getElementById("result").value);
+}
+function sinh()
+{
+    document.getElementById("result").value=Math.sinh( document.getElementById("result").value);
+}
+function cos()
+{
+    document.getElementById("result").value=Math.cos( document.getElementById("result").value);
+}
+function cosh()
+{
+    document.getElementById("result").value=Math.cosh( document.getElementById("result").value);
+}
+function tan()
+{
+    document.getElementById("result").value=Math.tan( document.getElementById("result").value);
+}
+function tanh()
+{
+    document.getElementById("result").value=Math.tanh( document.getElementById("result").value);
+}
+function ABS()
+{
+    document.getElementById("result").value=Math.abs( document.getElementById("result").value);
+}
+function exponential()
+{
+    document.getElementById("result").value=Math.exp( document.getElementById("result").value);
+}
+function ln()
+{
+    document.getElementById("result").value=Math.log( document.getElementById("result").value);
+}
+function round()
+{
+    document.getElementById("result").value=Math.round( document.getElementById("result").value);
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div class="main">
+<form>
+<p><input type="text" class="text" id="result" placeholder="0"></p>
+</form>
+<table>
+<tr>
+<td><input type="button" class="button" value="sinh"  onclick="sinh('sinh')"></td>
+<td><input type="button" class="button" value="cosh"  onclick="cosh('cosh')"></td>
+<td><input type="button" class="button" value="tanh"  onclick="tanh('tanh')"></td>
+<td><input type="button" class="button" value="x²"  onclick="power2('x²')"></td>
+<td><input type="button" class="button" value="e"  onclick="exponential('e')"></td>
+
+</tr>
+
+<tr>
+<td><input type="button" class="button" value="sin"  onclick="sin('sin')"></td>
+<td><input type="button" class="button" value="cos"  onclick="cos('cos')"></td>
+<td><input type="button" class="button" value="tan"  onclick="tan('tan')"></td>
+<td><input type="button" class="button" value=" √ " onclick="root('√')" ></td>
+<td><input type="button" class="button" value=" &#8731 " onclick="cubicroot('&#8731')" ></td>
+
+</tr>
+
+<tr>
+<td><input type="button" class="button" value="&#8719"  onclick="pi('&#8731')" ></td>
+<td><input type="button" class="button" value="c"  onclick="clearscreen()"></td>
+<td><input type="button" class="button" value="⌫"  onclick="remove('⌫')"></td>
+<td><input type="button" class="button" value="%"   onclick="display('%')"></td>
+<td><input type="button" class="button" value="÷"  onclick="display('/')"></td>
+
+</tr>
+
+<tr>
+<td><input type="button" class="button" value="ln" onclick="ln('ln')"></td>
+<td><input type="button" class="numbers" value="7" onclick="display('7')"></td>
+<td><input type="button" class="numbers" value="8" onclick="display('8')"></td>
+<td><input type="button" class="numbers" value="9" onclick="display('9')"></td>
+<td><input type="button" class="button"  value="x" onclick="display('*')"></td>
+</tr>
+
+<tr>
+<td><input type="button" class="button" value="Abs"  onclick="ABS('Abs')"></td>
+<td><input type="button" class="numbers" value="4" onclick="display('4')"></td>
+<td><input type="button" class="numbers" value="5" onclick="display('5')"></td>
+<td><input type="button" class="numbers" value="6" onclick="display('6')"></td>
+<td><input type="button" class="button"  value="-" onclick="display('-')"></td>
+</tr>
+
+<tr>
+<td><input type="button" class="button" value="round" onclick="round('round')"></td>
+<td><input type="button" class="numbers" value="1" onclick="display('1')"></td>
+<td><input type="button" class="numbers" value="2" onclick="display('2')"></td>
+<td><input type="button" class="numbers" value="3" onclick="display('3')"></td>
+<td><input type="button" class="button"  value="+" onclick="display('+')"></td>
+</tr>
+
+<tr>
+<td><input type="button" class="button"  value="("   onclick="display('(')"></td>
+<td><input type="button" class="button"  value=")"   onclick="display(')')"></td>
+<td><input type="button" class="numbers" value="0"   onclick="display('0')"></td>
+<td><input type="button" class="button"  value="."   onclick="display('.')"></td>
+<td><input type="button" class="button"  value="="   onclick="compute()"></td>
+</tr>
+</table>
+
+
+</div>
+</body>
+
+</html>
